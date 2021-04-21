@@ -58,7 +58,7 @@ void ui(void)
         if (picNow == 0x0000)
         {
             u16 cache = 0;
-            ReadDGUS(0xa021, (u8 *)(&cache), 2);
+            ReadDGUS(0xa02a, (u8 *)(&cache), 2);
             if ((testState != 1) && (cache == 1))
             {
                 beepCount += 1;

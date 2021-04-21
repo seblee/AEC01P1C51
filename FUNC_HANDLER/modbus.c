@@ -38,7 +38,7 @@ u32 modbus_tx_process_tick = 0;  // modbus发送命令的时间间隔
 
 const modbosCmd_t modbusCmdlib[] = {
     // en         id         fun    len  timeout      mod    modP     VP  slaveAddr feedback
-    {BUS_EN, SLAVE_ID, BUS_FUN_03H, 0x06, 0xc8, MODE_ALWA, 0x0000, 0xa020, 0x0355, 0x00ff},
+    {BUS_EN, SLAVE_ID, BUS_FUN_03H, 0x0b, 0xc8, MODE_ALWA, 0x0000, 0xa020, 0x034c, 0x00ff},
 
 };
 modbosCmd_t modbusCmdNow = {0};
