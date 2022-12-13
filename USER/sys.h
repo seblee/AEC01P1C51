@@ -82,12 +82,12 @@ typedef union
 #define WDT_OFF() MUX_SEL &= 0xFD /******关闭看门狗*********/
 #define WDT_RST() MUX_SEL |= 0x01 /******喂狗*********/
 
-//电源开关宏定义
+// 电源开关宏定义
 #define POWER_ON() P2_1 = 1;
 #define POWER_OFF() P2_1 = 0;
-//电源开关引脚
+// 电源开关引脚
 sbit P2_1 = P2 ^ 1;
-//电压反馈，低电平表示按键有效
+// 电压反馈，低电平表示按键有效
 sbit KEY1_Vin_F = P2 ^ 2;
 
 #define SOFTWARE_VER 0x0102
@@ -99,6 +99,8 @@ extern data _TKS_FLAGA_type MSFlag;
 #define MS500msFlag MSFlag.bits.b3
 
 #define VP_TEMP 0x3000
+#define MDO_UART2
+// #define MDO_UART5
 /*****************************************************************************
 对外函数声明*/
 void InitSys(void); /* 寄存器配置初始化 */
